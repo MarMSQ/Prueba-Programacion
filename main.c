@@ -1,13 +1,12 @@
+///monto,tasa interes
 #include <stdio.h>
 #include <math.h>
 
-float calculointeres(float a, float b, float c)
-{
-    a=b*(c/100);
-    return;
+float calculointeres(float a, float b) {
+    return a * (b / 100);
 }
-int main(int argc, char const *argv[])
-{
+
+int main(int argc, char const *argv[]) {
     int tiempo, i;
     float monto, interes, div, saldo, ts, ta, mm, ti;
     
@@ -23,9 +22,8 @@ int main(int argc, char const *argv[])
     ti = 0; 
     
     printf("Año\tInteres\tMonto mensual\n");
-    for (i = 1; i <= tiempo; i++)
-    {
-        ts = calculointeres(saldo,interes);
+    for (i = 1; i <= tiempo; i++) {
+        ts = calculointeres(saldo, interes);
         ti += ts; 
         ta = div + ts;
         mm = ta / 12;
